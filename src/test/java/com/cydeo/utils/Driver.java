@@ -24,11 +24,10 @@ public class Driver {
             switch (platform) {
                 case "android":
                     DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-                    desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-                    desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
-                    desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
                     desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3");
-                    desiredCapabilities.setCapability(MobileCapabilityType.APP, "https://cybertek-appium.s3.amazonaws.com/calculator.apk");
+                    desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+                    desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
+                    desiredCapabilities.setCapability(MobileCapabilityType.APP,"https://cybertek-appium.s3.amazonaws.com/calculator.apk");
                     try {
                         url = new URL("http://localhost:4723/wd/hub");
                     } catch (MalformedURLException e) {
